@@ -118,6 +118,25 @@ tools/venv/bin/python -I tools/tv.py --probe
 tools/venv/bin/python -I tools/tv.py 'pm list packages'
 ```
 
+Windows 的虚拟环境位于 `venv\Scripts\` 而不是 `bin/`，并且 `python3` 可能是 Microsoft Store 的占位程序；请改用 `python`：
+
+```powershell
+python -m venv tools\venv
+tools\venv\Scripts\python.exe -m pip install -r tools\requirements.txt
+$env:TV_HOST = "192.168.1.50"
+tools\venv\Scripts\python.exe -I tools\tv.py --probe
+tools\venv\Scripts\python.exe -I tools\tv.py 'pm list packages'
+```
+
+PowerShell 和 Git Bash 用单引号把整条命令括起来；`cmd.exe` 不支持单引号，会把它原样传给电视，导致 `pm list packages: not found`。在 `cmd.exe` 中去掉引号，或改用双引号：
+
+```bat
+set TV_HOST=192.168.1.50
+tools\venv\Scripts\python.exe -I tools\tv.py pm list packages
+```
+
+`tv.py` 会把所有参数按空格拼成一条命令发送，所以在 `cmd.exe` 中 `pm list packages` 不加引号最稳妥。
+
 ### 2. 按需应用停用列表
 
 **下面的小米路径仅为示例，请替换为与你的电视匹配且已核对的列表。** 不要将其他机型的列表直接用于自己的电视。
