@@ -1,0 +1,58 @@
+# Xiaomi Mi TV 2 (MiTV2, codename entrapment), 2014, Android 4.3 (SDK 18), firmware 4.6.25.710.
+# China-market build: no Google apps present. Tested on a retail set on 2026-10-24; one session,
+# not several days. Every package below was disabled and the set was checked after each batch.
+#
+# ROOT REQUIRED on this build. When the shell user calls setApplicationEnabledSetting, the ROM
+# kills `pm` itself (logcat: "just debug log, kill itself"), so `pm disable-user --user 0` exits
+# 137 and changes nothing. Android 4.3 has no `pm hide`. The list must be applied as root:
+# Apply (one package per shell call):
+#   grep -vE '^\s*(#|$)' examples/xiaomi-mitv2-entrapment/debloat.txt | sed -E 's/\s+#.*$//' \
+#     | awk '{print "su -c \"pm disable-user --user 0 " $1 "\""}' \
+#     | TV_HOST=<tv ip> tools/venv/bin/python -I tools/tv.py --batch
+# Undo: same, with `pm enable --user 0` instead of `pm disable-user --user 0`.
+# tools/disable.sh and tools/restore.sh assume the shell user and do not work on this set.
+#
+# KEEP com.kingroot.kinguser enabled: it is the root manager on this unit, and disabling it makes
+# `su` fail with "connect ui: Timer expired". Recovery on this set used:
+#   pm install -r /system/app/xinyi_ku.apk
+#
+# LAUNCHER NOT REPLACED: launcher/ needs minSdk 26 and this set is SDK 18; `cmd package` does not
+# exist, so there is no set-home-activity. Home stays com.xiaomi.tv.desktop. Reboot tested on
+# 2026-10-24: the set booted to it, the Home key returned to it, ADB reconnected and `su` still works.
+#
+# KEPT ON PURPOSE: Tencent Video (com.ktcp.video), Dangbei Market (com.dangbeimarket), Dangbei
+# Screencast (com.dangbei.screencast), USB media player (com.jrm.localmm), soundbar service
+# (com.xiaomi.mitv.soundbar), TV/HDMI input packages (com.xiaomi.mitv.tvplayer,
+# com.mstar.android.providers.tv, com.xiaomi.mitv.providers.settings), Bluetooth and both IMEs,
+# Settings, package installer and the system providers.
+#
+# Not listed: 11 packages were already disabled on this unit before the session (payment, app
+# store, OTA, push, phone remote, DLNA, cast box, VPN dialogs, contacts/calendar providers,
+# fused location). They were not disabled or tested here.
+
+# Promo / content-wall apps
+com.xiaomi.mitv.commentservice         # comments plugin
+com.xiaomi.tv.micinema                 # Mi Cinema promo app
+com.duokan.duokantv                    # Duokan TV video
+com.xiaomi.tv.gallery                  # Mi gallery
+com.duokan.cloudalbum                  # Duokan cloud album
+com.duokan.screensaver                 # Duokan screensaver
+com.android.dreams.basic               # AOSP daydream screensaver
+com.android.browser                    # AOSP browser
+
+# Misc apps with no launcher entry left after the cleanup
+com.android.quicksearchbox
+com.android.calendar
+com.android.contacts
+com.android.soundrecorder
+com.android.deskclock
+com.android.music
+com.xiaomi.mimusic
+com.android.providers.userdictionary
+
+# Services, store leftovers and the second root helper
+com.miui.cloudservice                  # Mi cloud service
+com.xiaomi.xmsf                        # Mi push service
+com.xiaomi.mitv.download               # Mi download service
+com.xiaomi.mitv.mediaexplorer          # DLNA/media browser
+com.mgyun.root.bdb303                  # root helper installed under /data; KingRoot keeps su

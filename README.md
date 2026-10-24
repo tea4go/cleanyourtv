@@ -361,6 +361,7 @@ Anker Nebula, BYINTEK, Epson, Formovie, Gadnic, HOTACK, JMGO, Magcubic, Portroni
 | Xiaomi Mi Box S (MIBOX4, oneday), streaming box | Android TV 9 |
 | Xiaomi Mi Box S 2nd gen (MiTV-AFKR0, jaws), streaming box | Google TV 11 |
 | Xiaomi Mi TV (MiTV-MOOQ0, croods; includes P1 43" EU variant) | Android TV 10 and 11 |
+| Xiaomi Mi TV 2 (MiTV2, entrapment), 2014 | Android 4.3 (SDK 18), firmware 4.6.25.710 |
 | Xiaomi Mi TV 4A (MiTV-MOOQ1) | Android TV 10 |
 | Xiaomi Mi TV P1 43" (MiTV-MOOQ2, croods) | Android TV 11 |
 | Xiaomi MiTV-AESP0 stick (aquaman, 1 GB) | Android TV 9 |
