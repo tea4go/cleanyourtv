@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <a href="docs/PRESS.md"><img src="docs/card.jpg" alt="260 TV models · 77 brands · 25 languages · 497 KB launcher. Featured in TechCrunch, TechRadar, Tom's Guide, Mashable, Android Authority, XDA, FlatpanelsHD, It's FOSS, Phandroid, GIGAZINE, Xataka, WinFuture, Frandroid, Macitynet, Techaeris, TechPP and 171 more: 187 articles from 31 countries. Before: stock Google TV home with a sponsored ad. After: the Clean Your TV launcher." width="800"></a>
+  <a href="docs/PRESS.md"><img src="docs/card.jpg" alt="261 TV models · 77 brands · 25 languages · 497 KB launcher. Featured in TechCrunch, TechRadar, Tom's Guide, Mashable, Android Authority, XDA, FlatpanelsHD, It's FOSS, Phandroid, GIGAZINE, Xataka, WinFuture, Frandroid, Macitynet, Techaeris, TechPP and 171 more: 187 articles from 31 countries. Before: stock Google TV home with a sponsored ad. After: the Clean Your TV launcher." width="800"></a>
 </p>
 
 **The viral tweet:** [x.com/gathint/status/2111379569030939102](https://x.com/gathint/status/2111379569030939102)
@@ -112,7 +112,7 @@ Anything running **Android TV** or **Google TV**.
 
 Tested lists from contributors, one folder per model in [`examples/`](examples/):
 
-**TCL** 57 · **Sony** 31 · **Xiaomi** 28 · **Philips** 14 · **Hisense** 9 · **Skyworth** 9 · **Amazon Fire TV** 7 ·
+**TCL** 57 · **Sony** 31 · **Xiaomi** 29 · **Philips** 14 · **Hisense** 9 · **Skyworth** 9 · **Amazon Fire TV** 7 ·
 **Thomson** 4 · **BenQ** 3 · **Google** 3 · **Haier** 3 · **OnePlus** 3 · **Panasonic** 3 · **CHiQ** 2 · **FFalcon** 2 ·
 **Hitachi** 2 · **Kalley** 2 · **Motorola** 2 · **Nokia** 2 · **NVIDIA Shield** 2 · **onn** 2 · **RCA** 2 · **Redmi** 2 ·
 **Sankey** 2 · **SHARP** 2 · **Toshiba** 2 · **Vu** 2 ·
