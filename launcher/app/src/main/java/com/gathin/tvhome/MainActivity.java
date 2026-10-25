@@ -1948,7 +1948,7 @@ public class MainActivity extends Activity implements AppAdapter.TileListener {
 
     /**
      * Grid tiles (every tile with dock_row false): the glow behind the grid takes the focused tile's colour; the big
-     * name above the dock does not show (every grid tile has its name underneath).
+     * name above the dock does not show (a grid tile prints its own name on the card).
      */
     private void showGlowOnly(int position) {
         int color = adapter.ambientColorAt(position);
