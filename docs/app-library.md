@@ -35,6 +35,8 @@ subtle tint. Updating an existing app does not mark it as new.
   the existing Inputs dropdown resources and stays over the selected card.
 - Back closes the menu first, then the library. Down from the last Home row or
   Right from the final app reaches the library pill; Up returns to the last row.
+  With `library_button` the pill is not drawn, and the top-bar button is the only
+  way in; closing returns focus to it.
   Hebrew mirrors the horizontal direction, so Left from the final app reaches it.
 
 With `tile_menu` on, holding OK on a Home tile offers Remove from Home as well, next to Move and App info.

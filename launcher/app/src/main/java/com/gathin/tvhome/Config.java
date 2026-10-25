@@ -129,7 +129,7 @@ final class Config {
     final boolean showHomeSettingsShortcut;
     /** One line under the clock: CPU, free memory, free storage. Off unless config or a theme turns it on. */
     final boolean showStats;
-    /** App library pill after the last Home row (config.xml app_library). */
+    /** App library pill after the last Home row (config.xml app_library); library_button replaces it with a top-bar button. */
     final boolean appLibrary;
     /** OK directly toggles Home membership in the library (app_library_selection). */
     final boolean appLibrarySelection;

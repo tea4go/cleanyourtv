@@ -229,7 +229,8 @@ public class AppAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         this.animations = cfg.animations;
         this.advancedEffects = cfg.animations && cfg.advancedEffects;
         this.showHomeSettings = cfg.showHomeSettingsShortcut;
-        this.showLibrary = cfg.appLibrary;
+        // A top-bar library button is the library's entry, so the pill after the last row would be a second one.
+        this.showLibrary = cfg.appLibrary && !cfg.libraryButton;
         this.reducedMotion = cfg.reducedMotion;
         this.focusOvershoot = cfg.focusOvershoot;
         this.rowsBelowDock = cfg.rowsBelowDock;
